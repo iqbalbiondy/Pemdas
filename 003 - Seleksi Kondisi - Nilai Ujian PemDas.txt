@@ -1,0 +1,58 @@
+[Perumpamaan, jangan masukkan hati]
+
+Serra berencana membantu dosen untuk mengkonversi nilai ujian Pemrograman Dasar. Ketentuan indeks nilai diberikan seperti berikut :
+
+image
+
+Tambahan : Jika nilai yang dimasukkan lebih kecil dari 0, maka indeks nilai akan menampilkan "Nilai Tidak Valid".
+
+Hasil outputnya berupa indeks nilai.
+
+Input Format
+
+Nilai
+
+Constraints
+
+-128 <= Nilai <= 128
+
+(gunakan byte)
+
+Output Format
+
+Nilai = (nilai)
+
+(indeks nilai)
+
+Sample Input 0
+
+88
+Sample Output 0
+
+Nilai = 88
+A
+=======================================================================
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        //Tuliskan kodemu disini!
+        Scanner hy = new Scanner(System.in);
+        byte nilai = hy.nextByte();
+        System.out.println("Nilai = " +nilai);
+        if(nilai < 0) System.out.println("Nilai Tidak Valid");
+        else if (nilai <= 44) System.out.println("E");
+        else if (nilai <= 50) System.out.println("D");
+        else if (nilai <= 55) System.out.println("D+");
+        else if (nilai <= 60) System.out.println("C");
+        else if (nilai <= 69) System.out.println("C+");
+        else if (nilai <= 75) System.out.println("B");
+        else if (nilai <= 80) System.out.println("B+");
+        else System.out.println("A");
+    }
+}

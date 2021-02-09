@@ -1,0 +1,102 @@
+Bayangkan kamu sebagai programmer handal yang banyak dikenal oleh orang-orang karena keahlian yang kamu miliki.
+
+Suatu saat kamu diberikan tugas untuk membuat program yang dapat menentukan hasil tes seorang siswa. Anggaplah tes tersebut di mata pelajaran matematika. Akan ada 4 penilaian di tes tersebut dengan rincian :
+
+Nilai pertama (dengan bobot 2)
+
+Nilai kedua (dengan bobot 3)
+
+Nilai ketiga (dengan bobot 4)
+
+Nilai keempat (dengan bobot 1)
+
+Dari keempat nilai tersebut hitunglah rata-ratanya dengan rumus (setiap nilai dikali bobotnya dan) dan dibagi 10).
+
+Dari hasil tersebut masukkan ke dalam ketentuan sebagai berikut :
+
+Jika rata-rata = 7 atau lebih, tampilkan "Anda Lulus".
+
+Jika rata-rata = 5 atau kurang, tampilkan “Anda Gagal”.
+
+Jika rata-rata ada diantara 5 dan 6.9, berikanlah nilai kelima sebagai remidi. Lalu hitung kembali dengan rumus (nilai rata-rata ditambah nilai remidi) dan dibagi 2. Dan berikan hasil akhir berupa :
+
+Jika nilai akhir = 5 atau lebih, tampilkan “Anda Berhasil”.
+
+Jika tidak, tampilkan “Mohon Maaf”.
+
+Input Format
+
+Nilai pertama
+
+Nilai kedua
+
+Nilai ketiga
+
+Nilai keempat
+
+Constraints
+
+Gunakan tipe data yang dapat menghitung angka dibelakang koma.
+
+Output Format
+
+Anda Lulus/Anda Gagal/Anda Berhasil/Mohon Maaf
+
+Sample Input 0
+
+7
+8
+9
+6.5
+Sample Output 0
+
+Anda Lulus
+Explanation 0
+
+Hasil perhitungan rata-rata dengan bobot nilai yang dibagi 10 diatas adalah 8.05. Yang artinya dia lulus, karena nilainya lebih dari 7.
+
+Sample Input 1
+
+7
+5
+4
+6
+3
+Sample Output 1
+
+Mohon Maaf
+Explanation 1
+
+Diatas terdapat 5 input, karena dari keempat nilai tes, hasil akhirnya adalah 5.1, yang artinya perlu remidi. Nilai 3 adalah nilai remidi. Sehingga nilai akhrinya adalah 4.05, yang artinya "Mohon Maaf".
+====================================================================================================================================
+import java.util.*;
+import java.lang.Math;
+
+public class JavaApplication {
+    private static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        double a1, a2, a3, a4, a5, rata1, rata2;
+        
+        a1 = input.nextDouble();
+        a2 = input.nextDouble();
+        a3 = input.nextDouble();
+        a4 = input.nextDouble();
+        rata1 = (a1 * 2 + a2 * 3 + a3 * 4 + a4) / 10;
+        if (rata1 >= 7) {
+            System.out.println("Anda Lulus");
+        } else {
+            if (rata1 >= 5) {
+                a5 = input.nextDouble();
+                rata2 = (rata1 + a5) / 2;
+                if (rata2 >= 5) {
+                    System.out.println("Anda Berhasil");
+                } else {
+                    System.out.println("Mohon Maaf");
+                }
+            } else {
+                System.out.println("Anda Gagal");
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+[Perumpamaan, jangan masukkan hati]
+
+Nowwil Afqa berencana pulang kampung. Sekarang ia ada di kota A. Untuk pulang kampung ke kota D, Afqa harus melewati kota B/C (pilih salah satu jalur) baru kemudian ke kota D . Setiap jalur antarkota akan memiliki nilai X Km sebagai jaraknya. Bantulah Afqa untuk menghitung jarak terdekat dari kota A ke kota D.
+
+Hasil output berupa nama jalurnya dan jarak terdekat untuk pulang kampung.
+
+Ilustrasinya seperti ini :
+
+image
+
+Input Format
+
+Jarak AB
+
+Jarak AC
+
+Jarak BD
+
+Jarak CD
+
+Constraints
+
+Jarak >= 0
+
+Output Format
+
+Jalur terdekat (ABD/ACD)
+
+Jarak terdekat
+
+Sample Input 0
+
+2
+5
+3
+1
+Sample Output 0
+
+Jalur terdekat : ABD
+Dengan jarak   : 5
+========================================================================
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner wil = new Scanner(System.in);
+        
+        int ab, ac, bd, cd, jalur1, jalur2;
+        ab = wil.nextInt();
+        ac = wil.nextInt();
+        bd = wil.nextInt();
+        cd = wil.nextInt();
+      
+      //Lanjutkan kode dibawah ini!
+        jalur1 = ab+bd;
+        jalur2 = ac+cd;
+        if (jalur1<jalur2){
+            System.out.println("Jalur terdekat : ABD");
+            System.out.println("Dengan jarak   : " + jalur1);
+            }
+            else {
+                System.out.println("Jalur terdekat : ACD");
+                 System.out.println("Dengan jarak   : " + jalur2);
+            }            
+    }
+}

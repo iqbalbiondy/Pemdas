@@ -1,0 +1,72 @@
+[Perumpamaan, jangan masukkan hati]
+
+Aldino Titteo memiliki adik perempuan yang masih kecil. Adiknya ingin belajar tentang nama-nama hari menggunakan penomoran agar mudah diingat. Bantulah Aldino untuk membuatkan program yang dapat menyebutkan nama hari.
+
+Ketentuan :
+
+Pengerjaan menggunakan switch case.
+
+Penamaan hari menggunakan UPPERCASE.
+
+Tambahan : hanya ada 7 hari dalam 1 minggu. Jika ada karakter lain daripada itu, tampilkan "Maaf, hanya ada 7 hari dalam 1 minggu.".
+
+Input Format
+
+Angka (semua karakter).
+
+Constraints
+
+Semua angka dan kemungkinan huruf.
+
+Output Format
+
+Angka (angka) adalah hari (hari).
+
+Sample Input 0
+
+1
+Sample Output 0
+
+Angka 1 adalah hari SENIN.
+=====================================================================
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+          Scanner scan = new Scanner(System.in);
+      
+          //Lengkapi variabel input!
+        String input = scan.nextLine();
+
+        //Lengkapi switch case!
+        switch (input) {
+        case "1":
+            System.out.println("Angka 1 adalah hari SENIN.");
+        break;
+        case "2":
+            System.out.println("Angka 2 adalah hari SELASA.");
+        break;
+        case "3":
+            System.out.println("Angka 3 adalah hari RABU.");
+        break;
+        case "4":
+            System.out.println("Angka 4 adalah hari KAMIS.");
+        break;
+        case "5":
+            System.out.println("Angka 5 adalah hari JUMAT.");
+        break;
+        case "6":
+            System.out.println("Angka 6 adalah hari SABTU.");
+        break;
+        case "7":
+            System.out.println("Angka 7 adalah hari MINGGU.");
+        break;
+            default: System.out.println("Maaf, hanya ada 7 hari dalam 1 minggu.");
+        }
+    }
+}
