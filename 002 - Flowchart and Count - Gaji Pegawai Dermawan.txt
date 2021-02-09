@@ -1,0 +1,55 @@
+Mas Ali adalah seseorang yang bekerja sebagai sales di suatu perusahaan terkenal. Setiap akhir bulan ia selalu menerima gajinya dengan lapang dada. Dengan rinciannya gaji utama yang ditambah dengan insentif penjualan sebesar 15%. Meskipun demikian, Mas Ali tetap menyedekahkan sedikit gajinya sebesar Rp100.000,-. Sehingga total gaji yang dibawa pulang adalah gaji pokok ditambah dengan insentif penjualan lalu dikurangi dengan sedekah..
+
+Input Format
+
+gaji = gaji pokok Mas Ali
+
+penjualan = penjualan Mas Ali dalam satu bulan
+
+Constraints
+
+0 <= ±1.79769313486231570E+308
+
+(gunakan variabel jenis double/real)
+
+Output Format
+
+Gaji yang dibawa pulang Mas Ali.
+
+Sample Input 0
+
+2500000
+1000000
+Sample Output 0
+
+2550000.0
+Explanation 0
+
+Gaji pokok Rp1000000 (sesuai dengan input)
+Insentif penjualan 15% dari Rp1000000 (sesuai dengan input)
+Total gaji yang diterima adalah gaji pokok yang ditambahkan insentif penjualan
+Gaji yang dibawa pulang adalah total gaji yang diterima dikurangi Rp100.000,-
+
+===========================================================================
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        double gaji, penjualan, sedekah, total, gajipulang;
+        
+        sedekah = 100000;
+        gaji = input.nextDouble();
+        penjualan = input.nextDouble();
+        penjualan = 0.15 * penjualan;
+        total = gaji + penjualan;
+        gajipulang = total - sedekah;
+        System.out.println(gajipulang);      	
+    }
+}
